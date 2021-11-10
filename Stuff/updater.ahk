@@ -8,7 +8,7 @@ Loop
 {
 FileReadLine, a, local_version.txt, 1 
 ; Read local version to a
-v := "https://github.com/JWitterick/Test/blob/main/current_version.txt?raw=true"
+v := "https://github.com/JWitterick/Fractal/blob/main/Operational/current_version.txt?raw=true"
 FileDelete, current_version.txt 
 URLDownloadToFile %v%, current_version.txt 
 ; Delete and redownload current vesion indicator
@@ -16,7 +16,7 @@ FileReadLine, b, current_version.txt, 1
 ; Current version to b
 If (a !=  b) 
 {
-v := "https://github.com/JWitterick/Test/blob/main/update.exe?raw=true"
+v := "https://github.com/JWitterick/Fractal/blob/main/Operational/update.ahk?raw=true"
 FileDelete, update.exe
 URLDownloadToFile %v%, update.exe
 Run, update.exe
